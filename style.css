@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: teal;
+    font-family: sans-serif;
+}
+
+#textBox {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.33);
+}
+
+/* Container for hovering preview tokens above columns */
+#hoverCellsContainer {
+    background-color: teal;
+    width: 538px; /* (7 * 70px) + (6 * 8px gap) */
+    height: 70px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hoverCell {
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Connect 4 Board */
+#container {
+    display: grid;
+    grid-template-columns: repeat(7, 70px);
+    gap: 8px;
+    background-color: hsl(50, 100%, 60%);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: hsl(50, 100%, 60%);
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid hsl(50, 100%, 60%);
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redCoins {
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.yellowCoins {
+    background-color: #f1c40f;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
